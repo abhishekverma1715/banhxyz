@@ -86,7 +86,15 @@ export const Fillings = () => {
     });
 
     flTl2
-      .from(carouselSectionRef.current, { display: 'none' })
+    gsap.set(carouselSectionRef.current, {
+      autoAlpha: 0,
+    });
+
+    flTl2
+      .to(carouselSectionRef.current, {
+        autoAlpha: 1,
+        duration: 0.1,
+      })
       .to([flRows[0], flRows[2]], {
         xPercent: 300,
         duration: 1.2,

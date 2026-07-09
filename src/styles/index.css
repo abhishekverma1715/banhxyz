@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+:root {
+  --brand: #f5ecd7;
+  /* BG */
+  --bg-body: var(--brand);
+  --surface: #d4a373;
+  --surface-red: #bc4749;
+  --surface-green: #6a994e;
+  /* Text */
+  --text-primary: black;
+  --text-reverse: var(--brand);
+  /* Number */
+  --glb-pad: 1.5rem;
+  --glb-col-gap: 1.5rem;
+  --viewport-height: 100dvh;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+h1 {
+  font-size: 7.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--surface-red);
+}
+
+i {
+  font-size: 1.25rem;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+section {
+  width: 100%;
+  padding: var(--glb-pad);
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.spacer {
+  width: 100%;
+  height: 15rem;
+}
+
+.btn-solid {
+  background-color: black;
+  color: var(--brand);
+  padding: 1rem 1.5rem;
+  border-radius: 10rem;
+}
+
+.btn-solid:hover {
+  background-color: rgb(34, 34, 34);
+  color: var(--brand);
+}
+
+/* Responsive typography & global rules matching original */
+@media screen and (max-width: 1800px) {
+  html,
+  body {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  h1 {
+    font-size: 7rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  i {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .spacer {
+    height: 10rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  h2 {
+    font-size: 1.65rem;
+  }
+}

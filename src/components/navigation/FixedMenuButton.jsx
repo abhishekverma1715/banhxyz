@@ -26,14 +26,8 @@ export const FixedMenuButton = ({ onOpenMenu }) => {
   }, []);
 
   return (
-    <div
-      ref={menuRef}
-      onClick={onOpenMenu}
-      className="fixed-menu flex justify-center items-center pt-4 pr-6 pb-0 pl-0 fixed top-0 right-0 z-[8] translate-x-[150%] transition-transform duration-200 ease-out cursor-pointer [&.is-appear]:translate-x-0"
-    >
-      <div className="menu-mobile on-desktop flex justify-self-end font-['Asap_Condensed'] font-bold text-2xl">
-        Menu
-      </div>
+    <div ref={menuRef} onClick={onOpenMenu} className="fixed-menu">
+      <div className="menu-mobile on-desktop">Menu</div>
     </div>
   );
 };

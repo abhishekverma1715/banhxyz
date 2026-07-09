@@ -102,24 +102,16 @@ export const Evolution = () => {
   }, []);
 
   return (
-    <div
-      ref={wrapRef}
-      className="evolution-wrap flex justify-center items-start w-full h-[300vh]"
-      id="evolution"
-    >
-      <div className="evo-container flex justify-center items-center sticky top-0 w-full h-screen">
-        <section className="evolution flex justify-center items-center w-full relative">
-          <div className="evo-wrap flex items-center justify-center flex-col gap-2 w-[min(45rem,100%)] max-[1366px]:w-[min(40rem,100%)] max-md:w-[min(32rem,100%)] max-sm:w-[min(28rem,100%)] relative z-[1]">
-            <h1 ref={h1Ref} className="text-center">
-              The Evolution of bánh mì
-            </h1>
-            <p ref={pRef} className="text-center w-[min(20rem,100%)]">
-              From a French delicacy to a Vietnamese street icon
-            </p>
+    <div ref={wrapRef} className="evolution-wrap" id="evolution">
+      <div className="evo-container">
+        <section className="evolution">
+          <div className="evo-wrap">
+            <h1 ref={h1Ref}>The Evolution of bánh mì</h1>
+            <p ref={pRef}>From a French delicacy to a Vietnamese street icon</p>
           </div>
 
-          <div className="evo-imgs absolute w-full h-[100dvh] grid grid-cols-12 grid-rows-3 gap-6 p-6 z-0 max-sm:hidden">
-            <div className="evo-img-wrap col-start-1 row-start-2 w-[14rem] max-[1439px]:w-[10rem] max-lg:w-[12rem] max-md:w-[10rem] aspect-[2/3]">
+          <div className="evo-imgs">
+            <div className="evo-img-wrap">
               <img
                 loading="lazy"
                 className="evo-img"
@@ -127,7 +119,7 @@ export const Evolution = () => {
                 alt="Evolution of banh mi 1"
               />
             </div>
-            <div className="evo-img-wrap col-start-4 self-center justify-self-end w-[10rem] max-[1439px]:w-[9rem] max-lg:w-[10rem] max-md:w-[8rem] aspect-square">
+            <div className="evo-img-wrap">
               <img
                 loading="lazy"
                 className="evo-img"
@@ -135,7 +127,7 @@ export const Evolution = () => {
                 alt="Evolution of banh mi 2"
               />
             </div>
-            <div className="evo-img-wrap col-start-7 col-end-9 self-start w-[14rem] max-[1439px]:w-[12rem] max-lg:w-[12rem] max-md:w-[10rem] aspect-[4/3]">
+            <div className="evo-img-wrap">
               <img
                 loading="lazy"
                 className="evo-img"
@@ -143,7 +135,7 @@ export const Evolution = () => {
                 alt="Evolution of banh mi 3"
               />
             </div>
-            <div className="evo-img-wrap col-start-12 row-start-2 self-center justify-self-end w-[14rem] max-[1439px]:w-[10rem] max-lg:w-[12rem] max-md:w-[10rem] aspect-[2/3]">
+            <div className="evo-img-wrap">
               <img
                 loading="lazy"
                 className="evo-img"
@@ -151,7 +143,7 @@ export const Evolution = () => {
                 alt="Evolution of banh mi 4"
               />
             </div>
-            <div className="evo-img-wrap col-start-9 row-start-3 self-start justify-self-end w-[10rem] max-[1439px]:w-[9rem] max-lg:w-[10rem] max-md:w-[8rem] aspect-square">
+            <div className="evo-img-wrap">
               <img
                 loading="lazy"
                 className="evo-img"
@@ -159,7 +151,7 @@ export const Evolution = () => {
                 alt="Evolution of banh mi 5"
               />
             </div>
-            <div className="evo-img-wrap col-start-5 col-end-7 row-start-3 self-end justify-self-end w-[14rem] max-[1439px]:w-[12rem] max-lg:w-[12rem] max-md:w-[10rem] aspect-[4/3]">
+            <div className="evo-img-wrap">
               <img
                 loading="lazy"
                 className="evo-img"
@@ -171,30 +163,20 @@ export const Evolution = () => {
         </section>
 
         {/* Milestone 1 (1859) pinned on top of evolution inside container */}
-        <section
-          ref={msTopRef}
-          id="msTop"
-          className="milestone flex justify-center items-center w-full h-screen gap-20 bg-[#d4a373] absolute z-[2] max-lg:flex-col max-lg:gap-10 max-sm:justify-center"
-        >
-          <div className="ms-content flex flex-col w-1/2 h-full justify-between gap-10 max-lg:w-full max-lg:h-auto max-sm:justify-center">
-            <div className="ms-header flex flex-col items-start justify-start w-[min(25rem,100%)] gap-2">
+        <section ref={msTopRef} id="msTop" className="milestone">
+          <div className="ms-content">
+            <div className="ms-header">
               <h2 ref={msH2Ref}>The arrival</h2>
               <p ref={msPRef}>
                 Originally brought to Saigon as the French Baguette, it was a
                 luxury reserved for the elite, known simply as Western Bread
               </p>
             </div>
-            <img
-              loading="lazy"
-              className="max-lg:w-3/5 max-sm:w-full"
-              src="/img/1859.svg"
-              alt="1859"
-            />
+            <img loading="lazy" src="/img/1859.svg" alt="1859" />
           </div>
-          <div className="ms-img-wrap-border w-1/2 h-full border-[0.8rem] border-[#f5ecd7] overflow-hidden aspect-[3/4] max-lg:w-full max-lg:border-[0.5rem]">
+          <div className="ms-img-wrap-border">
             <img
               loading="lazy"
-              className="h-full object-cover"
               src="/img/Banh mi 1859.png"
               alt="Banh mi 1859"
             />

@@ -142,45 +142,39 @@ export const Fillings = () => {
   }, []);
 
   return (
-    <div
-      ref={wrapperRef}
-      className="fl-wrapper flex justify-center items-start w-full h-[300vh]"
-    >
-      <div className="fl-container flex justify-center items-center w-full h-[100dvh] sticky top-0">
-        <section className="fillings flex justify-center items-center w-full h-[100dvh] overflow-hidden" id="fillings">
-          <div className="fillings-wrap flex flex-col justify-center items-center gap-2">
-            <div className="fillings-content flex justify-center items-center gap-6">
+    <div ref={wrapperRef} className="fl-wrapper">
+      <div className="fl-container">
+        <section className="fillings" id="fillings">
+          <div className="fillings-wrap">
+            <div className="fillings-content">
               <h1 ref={flH1TopRef}>Types of</h1>
-              <div className="fillings-bg flex h-20 p-1 bg-[#6a994e] max-[540px]:h-14">
+              <div className="fillings-bg">
                 <img
                   loading="eager"
                   src="/img/Topping 1.png"
                   alt="Banh mi small image"
-                  className="block h-full w-auto object-contain"
                 />
               </div>
             </div>
 
-            <div className="fillings-content row-reverse flex flex-row-reverse justify-center items-center gap-6">
+            <div className="fillings-content row-reverse">
               <h1 ref={flH1MidRef}>Bánh mì</h1>
-              <div className="fillings-bg flex h-20 p-1 bg-[#6a994e] max-[540px]:h-14">
+              <div className="fillings-bg">
                 <img
                   loading="eager"
                   src="/img/Topping 2.png"
                   alt="Banh mi small image"
-                  className="block h-full w-auto object-contain"
                 />
               </div>
             </div>
 
-            <div className="fillings-content flex justify-center items-center gap-6">
+            <div className="fillings-content">
               <h1 ref={flH1BottomRef}>Fillings</h1>
-              <div className="fillings-bg flex h-20 p-1 bg-[#6a994e] max-[540px]:h-14">
+              <div className="fillings-bg">
                 <img
                   loading="eager"
                   src="/img/Topping 3.png"
                   alt="Banh mi small image"
-                  className="block h-full w-auto object-contain"
                 />
               </div>
             </div>
@@ -188,33 +182,21 @@ export const Fillings = () => {
         </section>
 
         {/* Slide */}
-        <section
-          ref={carouselSectionRef}
-          className="fl-carousel flex justify-center items-center w-full h-[100dvh] p-0 overflow-hidden absolute"
-        >
-          <div className="fl-wrap flex flex-col justify-center items-center w-full overflow-hidden gap-0 max-md:gap-4">
-            <p
-              ref={flTextRef}
-              className="text-base text-center w-[min(26rem,100%)] px-4"
-            >
+        <section ref={carouselSectionRef} className="fl-carousel">
+          <div className="fl-wrap">
+            <p ref={flTextRef}>
               Banh mi has different fillings and can be paired with many
               Vietnamese dishes
             </p>
 
             <FillingsSlider slideWrapRef={slideWrapRef} />
 
-            <div className="fl-btn flex justify-center items-center gap-10 mt-1">
-              <div
-                className="btn flex justify-center items-center w-16 h-16 rounded-full bg-[#d4a373] cursor-pointer text-black hover:bg-[#b48b61] transition-colors"
-                id="btnPrev"
-              >
-                <i className="ph-fill ph-arrow-left text-2xl" />
+            <div className="fl-btn">
+              <div className="btn" id="btnPrev">
+                <i className="ph-fill ph-arrow-left" />
               </div>
-              <div
-                className="btn flex justify-center items-center w-16 h-16 rounded-full bg-[#d4a373] cursor-pointer text-black hover:bg-[#b48b61] transition-colors"
-                id="btnNext"
-              >
-                <i className="ph-fill ph-arrow-right text-2xl" />
+              <div className="btn" id="btnNext">
+                <i className="ph-fill ph-arrow-right" />
               </div>
             </div>
           </div>

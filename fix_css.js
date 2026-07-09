@@ -1,0 +1,1 @@
+const fs = require('fs'); let css = fs.readFileSync('src/styles/index.css', 'utf8'); css = css.replace(/url\(\"img\//g, 'url("/img/'); css = css.replace(/url\(img\//g, 'url(/img/'); css = css.replace(/url\('img\//g, 'url(''/img/'); fs.writeFileSync('src/styles/index.css', css);

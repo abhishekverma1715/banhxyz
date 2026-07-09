@@ -104,13 +104,9 @@ export const Milestone = () => {
   return (
     <div ref={stickyWrapRef} className="milestone-sticky">
       {/* ms 2 (1958) */}
-      <section
-        ref={ms2Ref}
-        className="milestone row-reverse ms-sticky flex flex-row-reverse justify-center items-center w-full h-screen gap-20 bg-[#d4a373] sticky top-0 max-lg:flex-col max-lg:gap-10 max-lg:relative"
-        id="ms2"
-      >
-        <div className="ms-content flex flex-col w-1/2 h-full justify-between gap-10 max-lg:w-full max-lg:h-auto max-sm:justify-center">
-          <div className="ms-header flex flex-col items-start justify-start w-[min(25rem,100%)] gap-2">
+      <section ref={ms2Ref} className="milestone ms-sticky row-reverse" id="ms2">
+        <div className="ms-content">
+          <div className="ms-header">
             <h2 ref={ms2H2Ref}>The rebirth</h2>
             <p ref={ms2PRef}>
               At a small bakery called Hòa Mã, the baguette was transformed. By
@@ -119,21 +115,12 @@ export const Milestone = () => {
               fast-paced life of the city
             </p>
           </div>
-          <img
-            loading="lazy"
-            className="max-lg:w-3/5 max-sm:w-full"
-            src="/img/1958.svg"
-            alt="1958"
-          />
+          <img loading="lazy" src="/img/1958.svg" alt="1958" />
         </div>
 
-        <div
-          ref={ms2ImgRef}
-          className="ms-img-wrap-border w-1/2 h-full border-[0.8rem] border-[#f5ecd7] overflow-hidden aspect-[3/4] max-lg:w-full max-lg:border-[0.5rem]"
-        >
+        <div ref={ms2ImgRef} className="ms-img-wrap-border">
           <img
             loading="lazy"
-            className="h-full object-cover"
             src="/img/Banh mi 1958.png"
             alt="Banh mi 1958"
           />
@@ -141,13 +128,9 @@ export const Milestone = () => {
       </section>
 
       {/* ms 3 (2011) */}
-      <section
-        ref={ms3Ref}
-        className="milestone ms-sticky flex justify-center items-center w-full h-screen gap-20 bg-[#d4a373] sticky top-0 max-lg:flex-col max-lg:gap-10 max-lg:relative"
-        id="ms3"
-      >
-        <div className="ms-content flex flex-col w-1/2 h-full justify-between gap-10 max-lg:w-full max-lg:h-auto max-sm:justify-center">
-          <div className="ms-header flex flex-col items-start justify-start w-[min(25rem,100%)] gap-2">
+      <section ref={ms3Ref} className="milestone ms-sticky" id="ms3">
+        <div className="ms-content">
+          <div className="ms-header">
             <h2 ref={ms3H2Ref}>Global recognition</h2>
             <p ref={ms3PRef}>
               The word "Banh Mi" officially entered the Oxford English
@@ -155,27 +138,18 @@ export const Milestone = () => {
               ambassador representing the resilience and creativity of Vietnam
             </p>
           </div>
-          <img
-            loading="lazy"
-            className="max-lg:w-3/5 max-sm:w-full"
-            src="/img/2011.svg"
-            alt="2011"
-          />
+          <img loading="lazy" src="/img/2011.svg" alt="2011" />
         </div>
 
-        <div
-          ref={ms3ImgRef}
-          className="ms-img-wrap-border w-1/2 h-full border-[0.8rem] border-[#f5ecd7] overflow-hidden aspect-[3/4] max-lg:w-full max-lg:border-[0.5rem]"
-        >
+        <div ref={ms3ImgRef} className="ms-img-wrap-border">
           <img
             loading="lazy"
-            className="h-full object-cover"
             src="/img/Banh mi 2011.png"
             alt="Banh mi 2011"
           />
         </div>
       </section>
-      <div className="spacer w-full h-[15rem] max-lg:h-[10rem]" />
+      <div className="spacer" />
     </div>
   );
 };

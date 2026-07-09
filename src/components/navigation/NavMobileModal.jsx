@@ -41,39 +41,15 @@ export const NavMobileModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <nav
-      ref={wrapRef}
-      onClick={onClose}
-      className="navmobile-wrap hidden flex-col justify-center items-center fixed z-[100] top-0 right-0 w-[10rem] max-lg:w-[11.5rem]"
-    >
-      <div
-        ref={menuRef}
-        onClick={(e) => e.stopPropagation()}
-        className="navmobile flex flex-col justify-start items-start gap-2 w-full pt-12 pr-8 pb-6 pl-6 bg-[#d4a373] shadow-[0px_2px_12px_0px_rgba(0,0,0,0.3)]"
-      >
-        <a href="#hero" onClick={handleLinkClick} className="text-base max-lg:text-xl hover:text-[#f5ecd7] transition-colors">
-          Top
-        </a>
-        <a href="#evolution" onClick={handleLinkClick} className="text-base max-lg:text-xl hover:text-[#f5ecd7] transition-colors">
-          Story
-        </a>
-        <a href="#anatomy" onClick={handleLinkClick} className="text-base max-lg:text-xl hover:text-[#f5ecd7] transition-colors">
-          Anatomy
-        </a>
-        <a href="#fillings" onClick={handleLinkClick} className="text-base max-lg:text-xl hover:text-[#f5ecd7] transition-colors">
-          Fillings
-        </a>
-        <a href="#street" onClick={handleLinkClick} className="text-base max-lg:text-xl hover:text-[#f5ecd7] transition-colors">
-          Street icon
-        </a>
+    <nav ref={wrapRef} className="navmobile-wrap" style={{ display: 'none' }}>
+      <div ref={menuRef} className="navmobile">
+        <a href="#hero" onClick={handleLinkClick}>Top</a>
+        <a href="#evolution" onClick={handleLinkClick}>Story</a>
+        <a href="#anatomy" onClick={handleLinkClick}>Anatomy</a>
+        <a href="#fillings" onClick={handleLinkClick}>Fillings</a>
+        <a href="#street" onClick={handleLinkClick}>Street icon</a>
       </div>
-      <p
-        ref={closeRef}
-        onClick={onClose}
-        className="font-['Asap_Condensed'] font-bold text-[1.65rem] leading-[0.7] translate-x-[20px] cursor-pointer"
-      >
-        Close
-      </p>
+      <p ref={closeRef} onClick={onClose} style={{ opacity: 0 }}>Close</p>
     </nav>
   );
 };

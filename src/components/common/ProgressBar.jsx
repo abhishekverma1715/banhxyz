@@ -22,10 +22,5 @@ export const ProgressBar = () => {
     };
   }, []);
 
-  return (
-    <div
-      ref={barRef}
-      className="progress-bar fixed top-0 left-0 h-[3px] w-0 bg-black pointer-events-none z-[9999]"
-    />
-  );
+  return <div ref={barRef} className="progress-bar" />;
 };

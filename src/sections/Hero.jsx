@@ -103,65 +103,23 @@ export const Hero = ({ onOpenMenu }) => {
         contentRef={preloadContentRef}
         h1Refs={preloadH1Refs}
       />
-      <section
-        className="hero grid grid-rows-[1fr_auto_1fr] items-center h-[100dvh] overflow-hidden"
-        id="hero"
-      >
-        <div
-          ref={heroTopRef}
-          className="hero-top grid grid-cols-5 gap-6 w-full self-start max-sm:flex max-sm:justify-between"
-        >
-          <a
-            href="#evolution"
-            className="navlink self-center justify-self-start max-md:hidden"
-          >
-            Story
-          </a>
-          <a
-            href="#anatomy"
-            className="navlink self-center justify-self-start max-md:hidden"
-          >
-            Anatomy
-          </a>
-          <h1 className="hero-tag text-2xl normal-case self-center justify-self-center">
-            #TheTasteOfVietnam
-          </h1>
-          <a
-            href="#fillings"
-            className="navlink self-center justify-self-end max-md:hidden"
-          >
-            Fillings
-          </a>
-          <a
-            href="#street"
-            className="navlink self-end justify-self-end max-md:hidden"
-          >
-            Street icon
-          </a>
-          <div
-            onClick={onOpenMenu}
-            className="menu-mobile hidden max-sm:flex justify-self-end font-['Asap_Condensed'] font-bold text-2xl cursor-pointer"
-          >
-            Menu
-          </div>
+      <section className="hero" id="hero">
+        <div ref={heroTopRef} className="hero-top">
+          <a href="#evolution" className="navlink">Story</a>
+          <a href="#anatomy" className="navlink">Anatomy</a>
+          <h1 className="hero-tag">#TheTasteOfVietnam</h1>
+          <a href="#fillings" className="navlink">Fillings</a>
+          <a href="#street" className="navlink">Street icon</a>
+          <div onClick={onOpenMenu} className="menu-mobile">Menu</div>
         </div>
 
-        <div className="hero-mid grid grid-cols-3 gap-6 w-full max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:gap-0">
-          <h1
-            ref={heroH1LeftRef}
-            className="hero-h1 text-[10rem] max-[1800px]:text-[8rem] max-lg:text-[7rem] max-sm:text-[5.5rem] self-center justify-self-end"
-          >
-            Banh mi
-          </h1>
-          <div
-            ref={heroImgRef}
-            className="hero-img flex items-center justify-center w-4/5 max-lg:w-1/2 max-sm:w-[65%] relative self-center justify-self-center aspect-square"
-          >
+        <div className="hero-mid">
+          <h1 ref={heroH1LeftRef} className="hero-h1">Banh mi</h1>
+          <div ref={heroImgRef} className="hero-img">
             <img
               loading="eager"
               fetchPriority="high"
               id="bmCircle"
-              className="w-4/5"
               src="/img/Hero banh mi circle bg.png"
               alt="Banh mi background circle"
             />
@@ -169,41 +127,27 @@ export const Hero = ({ onOpenMenu }) => {
               loading="eager"
               fetchPriority="high"
               id="bmMain"
-              className="absolute w-[90%]"
               src="/img/Hero banh mi.png"
               alt="Banh mi"
             />
           </div>
-          <h1
-            ref={heroH1RightRef}
-            className="hero-h1 text-[10rem] max-[1800px]:text-[8rem] max-lg:text-[7rem] max-sm:text-[5.5rem] self-center justify-self-start"
-          >
-            Viet nam
-          </h1>
+          <h1 ref={heroH1RightRef} className="hero-h1">Viet nam</h1>
         </div>
 
-        <div
-          ref={heroBottomRef}
-          className="hero-bottom grid grid-cols-[0.5fr_auto_0.5fr] gap-6 w-full self-end max-lg:grid-cols-1 max-lg:gap-4 max-sm:gap-2"
-        >
-          <p className="hero-b1 self-end justify-self-start max-lg:self-center max-lg:justify-self-center max-lg:row-start-2">
-            /ˌbɑːn ˈmiː/ (noun)
-          </p>
-          <p
-            ref={heroB2Ref}
-            className="hero-b2 text-center w-[25rem] max-lg:w-[min(25rem,100%)] self-center justify-self-center"
-          >
+        <div ref={heroBottomRef} className="hero-bottom">
+          <p className="hero-b1">/ˌbɑːn ˈmiː/ (noun)</p>
+          <p ref={heroB2Ref} className="hero-b2">
             More than just a sandwich, it's a legendary, crispy flavor that
             resonates through generations. Feel the soul of Vietnam, with every
             bite.
           </p>
-          <div className="hero-b3 flex items-center justify-center gap-2 self-end justify-self-end max-lg:justify-self-center">
+          <div className="hero-b3">
             <p>Discover the crunch</p>
-            <i id="heroIcon" className="ph-fill ph-arrow-down text-base" />
+            <i id="heroIcon" className="ph-fill ph-arrow-down" />
           </div>
         </div>
       </section>
-      <div className="spacer w-full h-[15rem] max-lg:h-[10rem]" />
+      <div className="spacer" />
     </>
   );
 };
